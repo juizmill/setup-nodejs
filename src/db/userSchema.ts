@@ -1,4 +1,3 @@
-import { UserEntity } from '@src/entities/UserEntity'
 import mongoose from 'mongoose'
 
 const schema = new mongoose.Schema({

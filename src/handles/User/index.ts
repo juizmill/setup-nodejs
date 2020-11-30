@@ -1,5 +1,5 @@
-import { UserFindByEmail } from '@src/handles/User/UserFindByEmail'
-import { UserRepository } from '@repositories/UserRepository'
+import { UserFindByEmail } from '@handles/User/UserFindByEmail'
+import { UserRepository } from '@repositories/users/UserRepository'
 import { UserCreate } from '@handles/User/UserCreate'
 
 const userRepository: UserRepository = new UserRepository()
