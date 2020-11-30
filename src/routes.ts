@@ -1,14 +1,14 @@
 import { Router } from 'express'
+import { userFindByEmail, createUser } from '@controllers/User'
 
-import { ExampleController } from '@controllers/ExampleController'
-// import { User } from '@models/User'
+const router: Router = Router()
 
-const imoviewRoute: Router = Router()
+router.get('/', (Request, Response) => {
+  return userFindByEmail.handle(Request, Response)
+})
 
-// const userModel: User = new User()
+router.post('/', (Request, Response) => {
+  return createUser.handle(Request, Response)
+})
 
-const createExampleController = new ExampleController('OPAAA')
-
-imoviewRoute.post('/', createExampleController.index)
-
-export { imoviewRoute }
+export { router }

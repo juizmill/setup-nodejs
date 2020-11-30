@@ -3,9 +3,8 @@ import pino from 'pino'
 import express from 'express'
 import mongoose from 'mongoose'
 import { config } from '@config/config'
-// import requireDir from 'require-dir'
 import expressPino from 'express-pino-logger'
-import { imoviewRoute } from './routes'
+import { router } from '@src/routes'
 
 const app = express()
 const logger = pino({
@@ -18,9 +17,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(expressLogger)
 
-// requireDir('./models')
-
-app.use('/api', imoviewRoute)
+app.use('/api', router)
 
 const boot = function () {
   app.listen(config.app.port, () => {
