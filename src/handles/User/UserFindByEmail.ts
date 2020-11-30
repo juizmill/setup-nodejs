@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 import { IUserRepository } from '@repositories/IUserRepository'
-import { IController } from '@controllers/IController'
+import { IController } from '@handles/IController'
 
 export class UserFindByEmail implements IController {
   private userRepository: IUserRepository

@@ -21,10 +21,10 @@
     "paths": {
       "@src/*": ["./src/*"],
       "@config/*": ["./src/config/*"],
-      "@controllers/*": ["./src/controllers/*"],
+      "@handles/*": ["src/handles/*"],
       "@entities/*": ["src/entities/*"],
       "@repositories/*": ["src/repositories/*"],
-      "@schemas/*": ["src/schemas/*"],
+      "@db/*": ["src/db/*"],
       "@services/*": ["./src/services/*"],
       "@providers/*": ["./src/providers/*"]
     }

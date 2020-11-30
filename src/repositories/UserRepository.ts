@@ -1,10 +1,9 @@
 import { IUserRepository } from '@repositories/IUserRepository'
 import { UserEntity } from '@src/entities/UserEntity'
-import { userSchema } from '@src/schemas/userSchema'
+import { userSchema } from '@db/userSchema'
 
 export class UserRepository implements IUserRepository {
   async findByEmail (email: string): Promise<UserEntity> {
-    console.warn(email)
     const user = await userSchema.findOne({ email }).lean()
 
     if (!user) {

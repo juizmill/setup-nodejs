@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { userFindByEmail, createUser } from '@controllers/User'
+import { userFindByEmail, createUser } from '@handles/User'
 
 const router: Router = Router()
 

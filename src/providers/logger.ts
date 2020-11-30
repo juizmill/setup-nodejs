@@ -1,11 +1,20 @@
-import pino from 'pino'
-import { config } from '@config/config'
-import expressPino from 'express-pino-logger'
+import fs from 'fs'
+import path from 'path'
+import morgan from 'morgan'
+import { Request, Response, NextFunction } from 'express'
 
-const logger = pino({
-  level: config.logger.level,
-  prettyPrint: config.app.env !== 'production'
-})
-const expressLogger = expressPino({ logger })
+const logger = function (req: Request, res: Response, next: NextFunction) {
+  const filePath = path.join(__dirname, '../../', '/logs/app.log')
 
-export { expressLogger }
+  if (!filePath) {
+    throw new Error('File Path logger not found')
+  }
+
+  morgan('common', {
+    stream: fs.createWriteStream(filePath, { flags: 'a' })
+  })
+
+  next()
+}
+
+export { logger }

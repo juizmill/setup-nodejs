@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import { UserEntity } from '@entities/UserEntity'
+import { IController } from '@handles/IController'
 import { IUserRepository } from '@repositories/IUserRepository'
-import { IController } from '@controllers/IController'
 
 export class UserCreate implements IController {
   private userRepository: IUserRepository
