@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noEmit": true,
     "target": "es2017",
     "module": "commonjs",
     "lib": ["es6"],
@@ -21,15 +22,15 @@
     "paths": {
       "@src/*": ["./src/*"],
       "@config/*": ["./src/config/*"],
-      "@handles/*": ["src/handles/*"],
-      "@entities/*": ["src/entities/*"],
-      "@repositories/*": ["src/repositories/*"],
-      "@db/*": ["src/db/*"],
+      "@handles/*": ["./src/handles/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@repositories/*": ["./src/repositories/*"],
+      "@db/*": ["./src/db/*"],
       "@services/*": ["./src/services/*"],
       "@providers/*": ["./src/providers/*"]
     }
   },
   "include": [
-    "src/**/*"
+    "./src/**/*"
   ]
 }
