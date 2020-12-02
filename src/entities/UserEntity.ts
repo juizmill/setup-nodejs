@@ -1,11 +1,11 @@
 import { v4 } from 'uuid'
 
 export class UserEntity {
-  public readonly _id: string
+  public readonly _id?: string
 
-  public name: string;
-  public email: string;
-  public password: string;
+  public name?: string
+  public email?: string
+  public password?: string
 
   constructor (props: Omit<UserEntity, '_id'>, _id?: string) {
     Object.assign(this, props)

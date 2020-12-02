@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
+    "strict": true,
+    "declaration": true,
     "noEmit": true,
+    "isolatedModules": false,
+    "moduleResolution": "node",
     "target": "es2017",
     "module": "commonjs",
     "lib": ["es6"],

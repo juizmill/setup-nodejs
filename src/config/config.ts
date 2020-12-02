@@ -7,7 +7,7 @@ const config = {
     level: process.env.LOG_LEVEL || 'info'
   },
   db: {
-    connectionString: process.env.MONGO_DB
+    connectionString: process.env.MONGO_DB || ''
   }
 }
 
